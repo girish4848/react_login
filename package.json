@@ -2,7 +2,7 @@
   "name": "login",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://github.com/girish4848/react_login",
+  "homepage" : "https://girish4848.github.io/login",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
