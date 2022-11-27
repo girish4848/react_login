@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/girish4848/react_login/static/css/main.3b6a8066.css",
-    "main.js": "/girish4848/react_login/static/js/main.d15cf379.js",
-    "static/js/787.0bca8be2.chunk.js": "/girish4848/react_login/static/js/787.0bca8be2.chunk.js",
-    "index.html": "/girish4848/react_login/index.html",
-    "main.3b6a8066.css.map": "/girish4848/react_login/static/css/main.3b6a8066.css.map",
-    "main.d15cf379.js.map": "/girish4848/react_login/static/js/main.d15cf379.js.map",
-    "787.0bca8be2.chunk.js.map": "/girish4848/react_login/static/js/787.0bca8be2.chunk.js.map"
+    "main.css": "/react_login/static/css/main.3b6a8066.css",
+    "main.js": "/react_login/static/js/main.6beeb119.js",
+    "static/js/787.0bca8be2.chunk.js": "/react_login/static/js/787.0bca8be2.chunk.js",
+    "index.html": "/react_login/index.html",
+    "main.3b6a8066.css.map": "/react_login/static/css/main.3b6a8066.css.map",
+    "main.6beeb119.js.map": "/react_login/static/js/main.6beeb119.js.map",
+    "787.0bca8be2.chunk.js.map": "/react_login/static/js/787.0bca8be2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3b6a8066.css",
-    "static/js/main.d15cf379.js"
+    "static/js/main.6beeb119.js"
   ]
 }
