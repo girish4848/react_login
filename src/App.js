@@ -34,6 +34,7 @@ const App = () => {
 
           rules={[
             {
+              required: true,
               message: 'Please input your username!',
             },
           ]}
@@ -46,6 +47,7 @@ const App = () => {
           name="password"
           rules={[
             {
+              required: true,
               message: 'Please input your password!',
             },
           ]}
@@ -67,12 +69,10 @@ const App = () => {
         <Form.Item
           wrapperCol={{
             offset: 8,
-            span: 16,
+            span: 10,
           }}
         >
-          <Button type="primary" htmlType="submit">
-            Sign in
-          </Button>
+         <Button block>Sign in</Button>
         </Form.Item>
       </Form>
     </section>
