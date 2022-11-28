@@ -1,13 +1,27 @@
-import React from 'react';
+import React , {useState} from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
-
+import { useNavigate } from "react-router-dom";
 const App = () => {
-  const onFinish = (values) => {
-    console.log('Success:', values);
-  };
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
+  const [email,setEmail] = useState("");
+  const [password,setPassword] = useState("");
+  const navigate = useNavigate();  
+  
+  async function login(){
+    console.warn(email,password)
+    let item= {email,password};
+    let result= await fetch("https://ujkp2xeahs.us-east-1.awsapprunner.com/api/v1/authenticate/login",{
+      method:'POST',
+      headers:{
+        "Content-Type" : "application/json",
+        "Accept": "application/json"
+      },
+      body:JSON.stringify(item)
+    });
+    result = await result.json();
+    localStorage.setItem("user-info",JSON.stringify(result))
+    navigate("/add")
+
+  }
   return (
     
     <div className="App">
@@ -24,8 +38,7 @@ const App = () => {
           span: 16,
         }}
         initialValues={{remember: true}}
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
+  
         autoComplete="off"
       >
         <Form.Item
@@ -39,7 +52,8 @@ const App = () => {
             },
           ]}
         >
-          <Input/>
+          <Input placeholder='email'
+          onChange={(e)=>setEmail(e.target.value)}/>
         </Form.Item>
 
         <Form.Item
@@ -52,7 +66,8 @@ const App = () => {
             },
           ]}
         >
-          <Input.Password type="password"/>
+          <Input.Password type="password" placeholder='password'
+          onChange={(e)=>setPassword(e.target.value)}/>
         </Form.Item>
 
         <Form.Item
@@ -72,7 +87,7 @@ const App = () => {
             span: 10,
           }}
         >
-         <Button block>Sign in</Button>
+         <Button onClick={login} block>Sign in</Button>
         </Form.Item>
       </Form>
     </section>
